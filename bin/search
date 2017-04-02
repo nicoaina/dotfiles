@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Quick search in a directory and its subdirectories for a string ($@).
+#
+set -e
+
+grep -rni "$@" --color=auto
