@@ -1,2 +1,2 @@
 export EDITOR='atom'
-export PATH=/opt/:$PATH
+export PATH=/opt:$PATH
