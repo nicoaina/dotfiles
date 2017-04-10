@@ -53,28 +53,6 @@ function nicecool() {
 alias niceprod="nicecool"
 alias np="nicecool"
 
-function extract() {
-    if [ -f $1 ] ; then
-        case $1 in
-            *.tar.bz2)  tar xjf $1      ;;
-            *.tar.gz)   tar xzf $1      ;;
-            *.bz2)      bunzip2 $1      ;;
-            *.rar)      rar x $1        ;;
-            *.gz)       gunzip $1       ;;
-            *.tar)      tar xf $1       ;;
-            *.tbz2)     tar xjf $1      ;;
-            *.tgz)      tar xzf $1      ;;
-            *.zip)      unzip $1        ;;
-            *.Z)        uncompress $1   ;;
-            *)          echo "'$1' cannot be extracted via extract()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
-    fi
-}
-alias extract="extract"
-alias unall="extract"
-
 # Bannir l'IP d'un méchant rapidement
 function ban() {
     if [ "`id -u`" == "0" ] ; then
@@ -103,8 +81,6 @@ alias cpuperf='for i in "0 1 2 3 4 5 6 7" ; do sudo cpufreq-set -c $i -g perform
 alias dockerip='docker ps | tail -n +2 | while read cid b; do echo -n "$cid\t"; docker inspect $cid | grep IPAddress | cut -d \" -f 4; done'
 alias dockip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 alias battery_stat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
-
-alias jjabber="cd ~/.purple/logs/jabber/wd-dw@jabber.deveryware.net"
 
 export SBT_OPTS=-XX:MaxPermSize=256m
 #alias terraform='DOCKER_HOST= docker run --rm --net=host --user=$UID:$GID -v $PWD:/data -e OS_AUTH_URL="$OS_AUTH_URL" -e OS_TENANT_ID="$OS_TENANT_ID" -e OS_TENANT_NAME="$OS_TENANT_NAME" -e OS_REGION_NAME="$OS_REGION_NAME" -e OS_USERNAME="$OS_USERNAME" -e OS_PASSWORD="$OS_PASSWORD" -ti uzyexe/terraform'
