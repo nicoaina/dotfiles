@@ -1,4 +1,6 @@
 "*":
+  "asciidoc-preview":
+    scrollMode: false
   core:
     disabledPackages: [
       "background-tips"
@@ -22,7 +24,7 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 17
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
