@@ -14,9 +14,6 @@ ZSH_THEME=${ZSH_THEME:-"bureau"}
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Customization
 ZSH_CUSTOM=$ZSH_DOTS/oh-my-zsh
 
-# your project folder that we can `c [tab]` to
-export PROJETS=~/Projets
-
 # Plugins
 plugins=(git autojump vagrant)
 
