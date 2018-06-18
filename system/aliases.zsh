@@ -92,3 +92,5 @@ export SBT_OPTS=-XX:MaxPermSize=256m
 
 alias generate_password='cat /dev/urandom | tr -dc A-Z-a-z-0-9 | head -c${1:-16} ; echo'
 
+alias lsize='du -hs * | sort -h'
+alias cleanboot='dpkg --get-selections|grep ''linux-image*''|awk ''{print $1}''|egrep -v "linux-image-$(uname -r)|linux-image-generic" |while read n;do sudo apt-get -y remove $n;done'
