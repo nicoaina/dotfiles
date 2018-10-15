@@ -24,7 +24,7 @@
     ]
   editor:
     fontFamily: "Menlo"
-    fontSize: 17
+    fontSize: 24
     invisibles: {}
     showIndentGuide: true
     softWrapAtPreferredLineLength: true

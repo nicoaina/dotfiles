@@ -2,3 +2,9 @@ alias webdav="mount.davfs https://webdav.deveryware.net/documents/ /media/davmou
 
 export DOCUMENT_DIR=~/Projets/documents
 export PROJETS=~/Projets
+
+# Load the custom .*-team I have
+for i in ~/.*-team; do
+  [ -e $i/.load.zsh ] && . $i/.load.zsh
+done
+               
