@@ -1,4 +1,4 @@
-alias webdav="mount.davfs https://webdav.deveryware.net/documents/ /media/davmount -o rw,uid=nma-dw"
+alias webdav="sudo mount -t cifs //10.100.20.101/documents /media/davmount/ -o user=nma-dw"
 
 export DOCUMENT_DIR=~/Projets/documents
 export PROJETS=~/Projets
